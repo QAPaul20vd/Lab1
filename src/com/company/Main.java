@@ -23,9 +23,8 @@ public class Main {
         //4. Printati rezultatul urmatoarelor operatiuni:
         //a. -5 + 8 * 6
 
-        byte nr1 = -5;
-        byte nr2 = 8;
-        byte nr3 = 6;
+        byte nr1 = -5, nr2 = 8, nr3 = 6;
+
         System.out.println("Rezultatul la pct. 4a este: " + (nr1 + nr2 * nr3));
 
         //b. (55+9) % 9
