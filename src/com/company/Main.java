@@ -8,8 +8,8 @@ public class Main {
         System.out.println("Hello");
         System.out.println("Baciu Paul" + '\n');
 
-        //2. Printati rezultatul sumei a doua numere(orice numere)
-        //3. Printati rezultatul impartirii a doua numere. Atentie, daca numarul nu este intreg, sa afiseze si valorile dupa virgula.
+        /*2. Printati rezultatul sumei a doua numere(orice numere)
+          3. Printati rezultatul impartirii a doua numere. Atentie, daca numarul nu este intreg, sa afiseze si valorile dupa virgula.*/
 
         int account = 75000;
         int yearSalary = 25000;
@@ -20,8 +20,8 @@ public class Main {
         float monthlySal = yearSalary / 12f;
         System.out.println("Salariul pe luna este: " + monthlySal + '\n');
 
-        //4. Printati rezultatul urmatoarelor operatiuni:
-        //a. -5 + 8 * 6
+        /* 4. Printati rezultatul urmatoarelor operatiuni:
+              a. -5 + 8 * 6 */
 
         byte nr1 = -5, nr2 = 8, nr3 = 6;
 
