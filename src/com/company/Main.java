@@ -41,6 +41,7 @@ public class Main {
         float nr3c = 5f;
         float nr4c = 8f;
         float rezultat = nr1c + nr2c * nr3c / nr4c;
+
         System.out.println("Rezultatul la pct. 4c este: " + rezultat);
         //sau
         System.out.println("Rezultatul la pct. 4c este: " + (20 + (-3) * 5 / 8f));
