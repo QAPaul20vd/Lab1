@@ -1,4 +1,4 @@
-package com.company;
+package com.company.lab1;
 
 public class Main {
 
@@ -20,7 +20,7 @@ public class Main {
         float monthlySal = yearSalary / 12f;
         System.out.println("Salariul pe luna este: " + monthlySal + '\n');
 
-        /* 4. Printati rezultatul urmatoarelor operatiuni:
+        /* 4. Printati rezultatul urmatoarelor operatii:
               a. -5 + 8 * 6 */
 
         byte nr1 = -5, nr2 = 8, nr3 = 6;
