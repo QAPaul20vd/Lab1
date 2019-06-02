@@ -39,10 +39,10 @@ public class Main {
         drawFace();
 
         int resmodulo = modulo(30, 4);
-        System.out.println("Restul impartirii numerelor este: " + resmodulo + "."+ '\n');
+        System.out.println("Restul impartirii numerelor este: " + resmodulo + "." + '\n');
 
         float degreeCelsius = FahtoCelsius(120);
-        System.out.println("Temperatura in grade Celsius este: " + degreeCelsius + "."+ '\n');
+        System.out.println("Temperatura in grade Celsius este: " + degreeCelsius + "." + '\n');
 
         float distM = inchToM(50.5f);
         System.out.println("Distanta in Metri este: " + distM + "." + '\n');
@@ -159,6 +159,7 @@ public class Main {
     /*9.Scrieti o metoda java, care primeste distanta (in metrii) si timpul (ca si 3 numere: ore, minute, secunde),
     si afiseaza viteza, in metrii pe secunda, kilometrii pe ora si mile pe ora. (Indiciu: 1 mila = 1609 metrii)*/
     public static int getSeconds(int ora, int minute, int secunde) {
+
         return secunde + minute * 60 + ora * 3600;
     }
 
