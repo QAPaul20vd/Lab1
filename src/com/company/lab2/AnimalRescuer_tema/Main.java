@@ -31,7 +31,7 @@ public class Main {
         cat.identity();
         cat.eat();
         cat.play();
-        System.out.println(cat.name + " is healthy: " + cat.healthy + ". She is hungry: " + cat.hungry + ", and is happy: " + cat.happiness + "."+'\n');
+        System.out.println(cat.name + " is healthy: " + cat.healthy + ". She is hungry: " + cat.hungry + ", and is happy: " + cat.happiness + "." + '\n');
 
         Adopter adult = new Adopter();
         adult.nameAdopter = "George";
