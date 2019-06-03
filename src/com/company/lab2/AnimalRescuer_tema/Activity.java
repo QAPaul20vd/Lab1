@@ -4,6 +4,6 @@ public class Activity {
     String action;
 
     public void freeTime() {
-        System.out.println("When I have some free time a like to " + action + ".");
+        System.out.println("When I have some free time I like to " + action + ".");
     }
 }

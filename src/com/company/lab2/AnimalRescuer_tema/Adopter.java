@@ -5,6 +5,6 @@ public class Adopter {
     float money;
 
     public void spend() {
-        System.out.println(nameAdopter + " has " + money + " USD and want to adopt an animal.");
+        System.out.println(nameAdopter + " has " + money + " USD and wants to adopt an animal.");
     }
 }
