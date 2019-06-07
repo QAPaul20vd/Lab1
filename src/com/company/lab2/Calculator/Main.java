@@ -55,7 +55,7 @@ public class Main {
 
     }
 
-    //1. Pentru exercitiile din clasa main() de data trecuta, creati metode separate pentru fiecare, tot in clasa Main.java, si apoi apelati-le in metoda main().
+    //1. Pentru exercitiile din clasa main() de data trecuta, creati metode separate pentru fiecare, tot in clasa AppMain.java, si apoi apelati-le in metoda main().
 
     public static void printName() {
         System.out.println("Hello \n Baciu Paul");
