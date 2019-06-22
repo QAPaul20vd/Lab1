@@ -139,6 +139,7 @@ public class LogicalOp {
     }
 
     //***************************************<<_____L A B  12_____>>***************************************************
+
     //**************************************<<_____T E M A  1_____>>***************************************************
 
 //1. Creati o metoda in clasa LogicalOp, care sa primeasca un numar ca si parametru.
@@ -242,7 +243,173 @@ public class LogicalOp {
             System.out.println();
         }
     }
+
+    //**************************************<<_____T E M A  2____>>***************************************************
+
+    //1. Creati o metoda in clasa LogicalOp, care sa primeasca un numar ca si parametru.
+    // Metoda sa verifice numarul primit si sa afiseze in consola o numaratoare pana la 100, pornind de la numarul primit ca si parametru.
+
+    public void printTo100While(int i) {
+        while (i <= 100) {
+            System.out.println(i);
+            i++;
+        }
+    }
+
+    public void printTo100DoWhile(int i) {
+        if (i > 100)
+            System.out.println("Introdu un numar pana la 100!");
+        else
+            do {
+                System.out.println(i);
+                i++;
+            } while (i <= 100);
+    }
+
+    //2. Creati o metoda in clasa LogicalOp, care primeste un numar ca si parametru.
+    // Metoda sa verifice numarul primit si sa afiseze in consola o numaratoare (inversa) pana la -100, pornind de la numarul primit ca si parametru.
+
+    public void printToMinus100While(int i) {
+        while (i >= -100) {
+            System.out.println(i);
+            i--;
+        }
+    }
+
+    public void printToMinus100DoWhile(int i) {
+        if (i < -100)
+            System.out.println("Introdu un numar mai mare sau egal cu -100!");
+        else
+            do {
+                System.out.println(i);
+                i--;
+            } while (i >= -100);
+    }
+
+    //3. Creati o metoda in clasa LogicalOp, care primeste doi parametrii de tip numar.
+    // Metoda sa afiseze o numaratoare intre cele doua numere primite, pornind de la primul parametru primit, pana la cel de-al doilea.
+
+    public void printCountBetweenNumbersWhile(int i, int j) {
+        if (i < j) {
+            while (i <= j) {
+                System.out.println(i);
+                i++;
+            }
+        } else
+            while (i >= j) {
+                System.out.println(i);
+                i--;
+            }
+    }
+
+    public void printCountBetweenNumbersDoWhile(int i, int j) {
+        if (i < j) {
+            do {
+                System.out.println(i);
+                i++;
+            } while (i <= j);
+        } else
+            do {
+                System.out.println(i);
+                i--;
+            } while (i >= j);
+
+    }
+
+    //4. Creati o metoda in clasa LogicalOp, care sa primeste doi parametrii de tip numar.
+    // Metoda trebuie sa verifice care dintre cele doua numere este mai mare, si sa execute o numaratoare crescatoare de la cel mai mic la cel mai mare.
+
+    public void printCountToHighestWhile(int i, int j) {
+        if (i < j) {
+            while (i <= j) {
+                System.out.println(i);
+                i++;
+            }
+        } else
+            while (j <= i) {
+                System.out.println(j);
+                j++;
+            }
+    }
+
+    //5. Creati o metoda in clasa LogicalOp care sa afiseze toate numerele pare de la 1 la 100.
+
+    public void printCountEvenNrWhile() {
+        int i = 1;
+        while (i <= 100) {
+            if (i % 2 == 0)
+                System.out.println(i);
+            i++;
+        }
+    }
+
+    public void printCountEvenNrDoWhile() {
+        int i = 1;
+        do {
+            if (i % 2 == 0)
+                System.out.println(i);
+            i++;
+        } while (i <= 100);
+
+    }
+
+    //6. Creati o metoda in clasa LogicalOp care sa afiseze toate numerele impare de la 1 la 100.
+    public void printCountOddNrWhile() {
+        int i = 1;
+        while (i <= 100) {
+            if (i % 2 != 0)
+                System.out.println(i);
+            i++;
+        }
+    }
+
+    //7. Creati o metoda care sa adune toate numerele din intervalul 111 si 8899.
+    // Sa se afiseze suma totala, iar dupa aceea sa se calculeze si afiseze media numerelor din acel interval.
+    // Introduceti o variabila int count in metoda, pentru a numara toate numerele din interval.
+
+    public void intervalMeanWhile() {
+        int sum = 0;
+        int i = 111;
+        float c = 0;
+        while (i <= 8899) {
+            sum += i;
+            c++;
+            i++;
+        }
+        System.out.println("Suma numerelor din intervalul 111-8899 este: " + sum);
+        System.out.println("Media numerelor din intervalul 111-8899 este: " + sum / c);
+
+    }
+
+    //8. Creati o metoda care sa primeasca doi parametrii de tip numar, si sa returneze media numerelor divizibile cu 7, din acel interval.
+
+    public float meanBy7(int a, int b) {
+        int iMin;
+        int iMax;
+
+        if (a < b) {
+            iMin = a;
+            iMax = b;
+        } else {
+            iMin = b;
+            iMax = a;
+        }
+
+        int count = 0;
+        float sum = 0;
+
+        while (iMin <= iMax) {
+            if (iMin % 7 == 0) {
+                count++;
+                sum += iMin;
+            }
+            iMin++;
+        }
+
+        return sum / count;
+    }
 }
+
 
 
 
