@@ -138,8 +138,11 @@ public class LogicalOp {
         return t;
     }
 
+    //***************************************<<_____L A B  12_____>>***************************************************
+    //**************************************<<_____T E M A  1_____>>***************************************************
+
 //1. Creati o metoda in clasa LogicalOp, care sa primeasca un numar ca si parametru.
-// Metoda sa verifice numraul primit, si sa afiseze in consola o numaratoare pana la 100, pornind de la numarul primit ca si parametru.
+// Metoda sa verifice numarul primit, si sa afiseze in consola o numaratoare pana la 100, pornind de la numarul primit ca si parametru.
 
     public void printTo100(int number) {
         for (int i = number; i <= 100; i++) {
@@ -239,24 +242,6 @@ public class LogicalOp {
             System.out.println();
         }
     }
-
-
-
-
-
-   /* public void printSumAndAverageDoWhile(int i, int limit) {
-        int sum = 0;
-        //int i = 1;
-        do {
-            sum += i;
-            i++;
-        } while (i <= limit);
-
-        System.out.println(sum);
-        System.out.println("Average is " + (sum / limit));
-    }*/
-
-
 }
 
 
