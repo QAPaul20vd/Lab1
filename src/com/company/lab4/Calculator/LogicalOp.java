@@ -408,7 +408,63 @@ public class LogicalOp {
 
         return sum / count;
     }
+
+    //9. Creati o metoda care sa afiseze primele 20 de numere din sirul lui Fibonacci.
+
+    public void first20NrOfFibonacci() {
+        int r = 0;
+        int t = 1;
+        int sum;
+        int count = 2;
+
+        System.out.print(r + "; ");
+        System.out.print(t + "; ");
+
+        while (count < 20) {
+            sum = r + t;
+            System.out.print(sum + "; ");
+            count++;
+            r = t;
+            t = sum;
+        }
+
+    }
+
+    //10. Creati o metoda numita CozaLozaWoza.
+
+    public void cozaLozaWoza() {
+        int i = 1;
+        boolean flag;
+        while (i <= 110) {
+
+            flag = false;
+            if (i % 3 == 0) {
+                System.out.print("Coza");
+                flag = true;
+            }
+            if (i % 5 == 0) {
+                System.out.print("Loza");
+                flag = true;
+            }
+            if (i % 7 == 0) {
+                System.out.print("Woza");
+                flag = true;
+            }
+
+            if (flag == false)
+                System.out.print(i);
+
+            if (i % 11 == 0)
+                System.out.println('\n');
+            else
+                System.out.print(" ");
+
+            i++;
+        }
+
+    }
 }
+
 
 
 
