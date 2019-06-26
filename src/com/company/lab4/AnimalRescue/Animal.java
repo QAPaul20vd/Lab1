@@ -1,80 +1,60 @@
 package com.company.lab4.AnimalRescue;
 
 public class Animal {
-    private String name;
-    private String food;
-    private String favGame;
-    private float age;
-    private byte healthy;
-    private byte hungry;
-    private byte happiness;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    private String name;
+    private String color;
+    private String food;
+    private float age;
+    private float weight;
 
     public String getName() {
         return name;
     }
 
-    public void setFood(String food) {
-        this.food = food;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public String getFood() {
         return food;
     }
 
-    public void setFavGame(String favGame) {
-        this.favGame = favGame;
-    }
-
-    public String getFavGame() {
-        return favGame;
-    }
-
-    public void setAge(float age) {
-        this.age = age;
+    public void setFood(String food) {
+        this.food = food;
     }
 
     public float getAge() {
         return age;
     }
 
-    public void setHealthy(byte healthy) {
-        this.healthy = healthy;
+    public void setAge(float age) {
+        this.age = age;
     }
 
-    public byte getHealthy() {
-        return healthy;
+    public float getWeight() {
+        return weight;
     }
 
-    public void setHungry(byte hungry) {
-        this.hungry = hungry;
+    public void setWeight(float weight) {
+        this.weight = weight;
     }
 
-    public byte getHungry() {
-        return hungry;
-    }
 
-    public void setHappiness(byte happiness) {
-        this.happiness = happiness;
-    }
-
-    public byte getHappiness() {
-        return happiness;
-    }
-
-    public void identity() {
-        System.out.println(name + " has " + age + " years.");
-    }
-
-    public void eat() {
+    public void eatFood() {
         System.out.println(name + " likes to eat " + food + ".");
     }
 
-    public void play() {
-        System.out.println(name + " likes to play with " + favGame + ".");
+    public void sleep() {
+        System.out.println("This animal sleeps all night.");
     }
 
 }

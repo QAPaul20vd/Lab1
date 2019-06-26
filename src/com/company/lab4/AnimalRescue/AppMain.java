@@ -1,51 +1,50 @@
 package com.company.lab4.AnimalRescue;
 
-import com.company.lab3.AnimalRescuer_encapsulate.Animal;
-import com.company.lab3.AnimalRescuer_encapsulate.*;
-
 public class AppMain {
     public static void main(String[] args) {
-
-        Animal dog = new Animal();
+        Dog dog = new Dog();
         dog.setName("Rex");
-        dog.setAge(5);
-        dog.setFavGame("running");
-        dog.setFood("Pedigree");
-        dog.setHappiness((byte) 9);
-        dog.setHealthy((byte) 10);
-        dog.setHungry((byte) 5);
+        dog.setCompanion(true);
+        dog.setAge(2.5f);
+        dog.setAggressiveness(8);
+        dog.setWeight(15);
+        System.out.println("My dog, " + dog.getName() + ", has " + dog.getWeight() + " kilos and is " + dog.getAge() + " years old.");
+        dog.sleep();
 
-        Animal cat = new Animal();
-        cat.setName("Mieunel");
-        cat.setAge(2.5f);
-        cat.setHealthy((byte) 6);
-        cat.setHungry((byte) 10);
-        cat.setHappiness((byte) 5);
-        cat.setFood("milk");
-        cat.setFavGame("mice");
+        Cat cat = new Cat();
+        cat.setName("Tom");
+        cat.setColor("white");
+        cat.setAge(3);
+        cat.setWeight(4);
+        System.out.println("My cat, " + cat.getName() + ", has " + cat.getWeight() + " kilos and is " + cat.getColor() + ".");
+        cat.purr();
+        cat.scratch();
 
-        Adopter adult = new Adopter();
-        adult.setNameAdopter("George");
-        adult.setMoney(1000);
+        Parrot parrot = new Parrot();
+        parrot.setName("Lizzy");
+        parrot.setColor("Red");
+        parrot.setWeight(0.5f);
+        System.out.println("My parrot is " + parrot.getName() + " and his feather is " + parrot.getColor() + ".");
+        parrot.isSinging();
 
-        AnimalFood dogFood = new AnimalFood();
-        dogFood.setFoodName("Royal Canin");
-        dogFood.setPrice(12.5f);
-        dogFood.setQuantity(35);
-        dogFood.setAvailability("Yes");
+        Rescuer rescuer = new Rescuer();
+        rescuer.setName("John");
+        rescuer.setGender("male");
+        rescuer.setMoney(1500);
+        rescuer.setSpace("backyard");
+        rescuer.setTypeOfAnimal("dog");
+        System.out.println(rescuer.getName() + " has " + rescuer.getMoney() + " dollars and would like to save a " + rescuer.getTypeOfAnimal() + " and play with it in his " + rescuer.getSpace() + ".");
+        rescuer.feedsAnimals();
+        rescuer.lovesAnimals();
 
-        AnimalFood catFood = new AnimalFood();
-        catFood.setFoodName("Purina");
-        catFood.setPrice(8.3f);
-        catFood.setQuantity(20);
-        catFood.setAvailability("Yes");
-
-        Activity freeTime = new Activity();
-        freeTime.setAction("run in forest");
-
-        VetDoc dr = new VetDoc();
-        dr.setName("Samuel Micu");
-        dr.setDiscipline("microbiology");
+        Nurse nurse = new Nurse();
+        nurse.setName("Evelyn");
+        nurse.setAge(45);
+        nurse.setYearsOfPractice(5);
+        nurse.setYearsOfStudy(13);
+        System.out.println(nurse.getName() + " is nurse for " + nurse.getYearsOfPractice() + " years.");
+        nurse.giveMedication();
+        nurse.preparePatient();
 
     }
 }
