@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
 //        1. Metode polimorfe
+
         Calculator calc = new Calculator();
         System.out.println("Rezultatul adunarii a doua numere intregi este: " + calc.addNrs(5, 10));
         System.out.println("Rezultatul adunarii a trei numere intregi este: " + calc.addNrs(5, 10, 15));
@@ -36,7 +37,7 @@ public class Main {
 
         System.out.println('\n');
 
-//        ARRAY-uri
+//        ARRAY
 
         LogicalOp op = new LogicalOp();
 

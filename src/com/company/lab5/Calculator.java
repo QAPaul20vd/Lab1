@@ -2,7 +2,7 @@ package com.company.lab5;
 
 public class Calculator {
 
-//    ADUNARE
+//    ADUNAREA
 
     public int addNrs(int nr1, int nr2) {
         int x = nr1 + nr2;
@@ -24,7 +24,7 @@ public class Calculator {
         return x;
     }
 
-//     SCADERE
+//     SCADEREA
 
     public int difNrs(int nr1, int nr2) {
         int x = nr1 - nr2;
@@ -41,7 +41,7 @@ public class Calculator {
         return x;
     }
 
-//    INMULTIRE
+//    INMULTIREA
 
     public int multNrs(int nr1, int nr2) {
         int x = nr1 * nr2;
@@ -58,7 +58,7 @@ public class Calculator {
         return x;
     }
 
-//    IMPARTIRE
+//    IMPARTIREA
 
     public float divNrs(float nr1, float nr2) {
         float y = nr1 / nr2;
