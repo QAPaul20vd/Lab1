@@ -478,6 +478,9 @@ public class LogicalOp {
     }
 
 
+    //**************************************<<_____L A B 13____>>***************************************************
+
+
 //    2.  In clasa LogicalOp, creati o metoda care sa scrie pe un array de 100 de pozitii, valorile de la 1 la 100.
 //    Sa se afiseze progresul in consola pe tot parcursul.
 
