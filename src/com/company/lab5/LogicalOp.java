@@ -625,6 +625,104 @@ public class LogicalOp {
         return emptyArray;
     }
 
+    /*********************************** O P T I O N A L E ***********************************************/
+
+
+//     2. Creati o metoda care sa insereze un element pe o pozitie specifica intr-un array.
+    public int[] insertElement(int[] myArray, int index, int nr) {
+        int[] newArray = new int[myArray.length + 1];
+
+        for (int i = 0; i < index - 1; i++) {
+            newArray[i] = myArray[i];
+        }
+        newArray[index - 1] = nr;
+        for (int i = index; i <= myArray.length; i++) {
+            newArray[i] = myArray[i - 1];
+        }
+        return newArray;
+    }
+
+
+//     3. Creati o metoda care sa gaseasca cel mai mare si cel mai mic numar dintr-un array.
+
+    public void getMinMaxFromArray(int[] anArray) {
+        int iMin = anArray[0];
+        int iMax = anArray[0];
+
+        for (int i = 0; i < anArray.length; i++) {
+            if (anArray[i] < iMin)
+                iMin = anArray[i];
+            else if (anArray[i] > iMax)
+                iMax = anArray[i];
+        }
+        System.out.println("Cel mai mic numar din array este: " + iMin);
+        System.out.println("Cel mai mare numar din array este: " + iMax);
+
+    }
+
+//     4. Creati o metoda care sa inverseze valorile unui array de int-uri.
+
+    public int[] invertArray(int[] myArray) {
+        int lenArr = myArray.length;
+        int[] secondArray = new int[lenArr];
+        int i, j = 0;
+
+        for (i = lenArr - 1; i >= 0; i--) {
+            secondArray[j++] = myArray[i];
+        }
+        return secondArray;
+    }
+
+//     5. Creati o metoda care sa gaseasca toate valorile duplicate dintr-un array.
+
+    public int[] findDuplicate(int[] myArray) {
+        int i, j, k = 0;
+        int lenArr = myArray.length;
+        int[] tempArray = new int[lenArr / 2];
+
+        for (i = 0; i < lenArr - 1; i++) {
+            for (j = i + 1; j < lenArr; j++) {
+                if (myArray[i] == myArray[j])
+                    tempArray[k++] = myArray[i];
+            }
+        }
+        int[] duplicateValues = new int[k];
+        for (j = 0; j < k; j++) {
+            duplicateValues[j] = tempArray[j];
+        }
+        return duplicateValues;
+    }
+
+
+//     6. Creati o metoda care sa gaseasca toate elementele comune intre doua array-uri (array de String).
+
+//    public String[] findSameElements(String[] firstStr, String[] secondStr){
+//
+//    }
+
+
+//     7. Creati o metoda care sa primeasca un array de numere ne-ordonat, si sa il returneze ordonat crescator.
+
+    public int[] sortUpArray(int[] randArr) {
+        int i, j;
+        int [] finalArr = new int[randArr.length];
+
+        for (i = 0; i < randArr.length - 1; i++) {
+            for (j = i + 1; j < randArr.length; j++) {
+                if (randArr[i] > randArr[j]) {
+                    int tempVal = randArr[i];
+                    randArr[i] = randArr[j];
+                    randArr[j] = tempVal;
+                }
+            }
+        }
+
+        for (i = 0; i < randArr.length; i++){
+            finalArr[i] = randArr[i];
+        }
+        return  finalArr;
+    }
+
 
 }
 

@@ -49,7 +49,7 @@ public class Main {
 
         for (int i = 0; i < myArray.length; i++) {
             if (i % 25 == 0)
-                System.out.println('\n');
+                System.out.println('\r');
             System.out.print(myArray[i] + " ");
         }
 
@@ -63,7 +63,7 @@ public class Main {
         int[] evenArray = op.getEvenArrayToHundred(smallArray);
         for (int i = 0; i < smallArray.length; i++) {
             if (i % 25 == 0)
-                System.out.println('\n');
+                System.out.println('\r');
             System.out.print(evenArray[i] + " ");
         }
         System.out.println('\n');
@@ -123,6 +123,65 @@ public class Main {
         }
         System.out.println('\n');
 
+
+//        2.
+        int[] myArr = {12, 45, 50, 32, 10};
+        int ind = 5;
+        int nr = 20;
+        int[] finalArray = op.insertElement(myArr, ind, nr);
+        if (ind <= myArr.length) {
+            System.out.print("Array-ul final este: ");
+            for (int i = 0; i < finalArray.length; i++) {
+                System.out.print(finalArray[i] + " ");
+            }
+        } else {
+            System.out.println("Indexul introdus este mai mare decat lungimea array-ului.");
+        }
+        System.out.println('\n');
+
+//        3.
+        op.getMinMaxFromArray(myArr);
+        System.out.println('\n');
+
+//        4.
+        int[] firstArray = {4, 15, 20, 34, 45, 67};
+        int[] invertedArr = op.invertArray(firstArray);
+
+        System.out.print("Array-ul initial este: ");
+
+        for (int i = 0; i < firstArray.length; i++) {
+            System.out.print(firstArray[i] + " ");
+        }
+        System.out.println('\r');
+        System.out.print("Array-ul inversat este: ");
+        for (int i = 0; i < invertedArr.length; i++) {
+            System.out.print(invertedArr[i] + " ");
+        }
+        System.out.println('\n');
+
+
+//        5.
+        int[] initArray = {23, 54, 23, 34, 54, 78, 65, 98, 78};
+        int[] duplicateVal = op.findDuplicate(initArray);
+
+        System.out.print("Valorile duplicate din array-ul dat sunt: ");
+        for (int i = 0; i < duplicateVal.length; i++) {
+            System.out.print(duplicateVal[i] + " ");
+        }
+        System.out.println('\n');
+
+//        6.
+
+
+//        7.
+        int[] numbers = {5, 3, 10, 8, 6, 2, 1, 4, 7, 9};
+        int[] orderedNr = op.sortUpArray(numbers);
+
+        System.out.print("Array-ul ordonat crescator este: ");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+        System.out.println('\n');
 
     }
 
