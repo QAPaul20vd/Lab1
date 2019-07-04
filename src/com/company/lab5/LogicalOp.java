@@ -696,16 +696,34 @@ public class LogicalOp {
 
 //     6. Creati o metoda care sa gaseasca toate elementele comune intre doua array-uri (array de String).
 
-//    public String[] findSameElements(String[] firstStr, String[] secondStr){
-//
-//    }
+    public String[] findSameElements(String[] firstStr, String[] secondStr) {
+        int k = 0;
+        int minLen;
+        if (firstStr.length > secondStr.length)
+            minLen = secondStr.length;
+        else
+            minLen = firstStr.length;
+
+        String[] tempArray = new String[minLen];
+        for (int i = 0; i < firstStr.length; i++) {
+            for (int j = 0; j < secondStr.length; j++) {
+                if (firstStr[i].equals(secondStr[j]))
+                    tempArray[k++] = firstStr[i];
+            }
+        }
+        String[] finalArray = new String[k];
+        for (int i = 0; i < k; i++) {
+            finalArray[i] = tempArray[i];
+        }
+        return finalArray;
+    }
 
 
 //     7. Creati o metoda care sa primeasca un array de numere ne-ordonat, si sa il returneze ordonat crescator.
 
     public int[] sortUpArray(int[] randArr) {
         int i, j;
-        int [] finalArr = new int[randArr.length];
+        int[] finalArr = new int[randArr.length];
 
         for (i = 0; i < randArr.length - 1; i++) {
             for (j = i + 1; j < randArr.length; j++) {
@@ -717,10 +735,10 @@ public class LogicalOp {
             }
         }
 
-        for (i = 0; i < randArr.length; i++){
+        for (i = 0; i < randArr.length; i++) {
             finalArr[i] = randArr[i];
         }
-        return  finalArr;
+        return finalArr;
     }
 
 

@@ -171,6 +171,18 @@ public class Main {
         System.out.println('\n');
 
 //        6.
+        String[] fruits = {"Mere", "Pere", "Struguri", "Caise", "Prune", "Cirese"};
+        String[] eatedFruits = {"Zmeura", "Pere", "Caise", "Mango"};
+
+        String[] eatenFruits = op.findSameElements(fruits, eatedFruits);
+
+        System.out.print("Valorile comune din array-urile date sunt: ");
+
+        for (int i = 0; i < eatenFruits.length; i++) {
+            System.out.print(eatenFruits[i] + " ");
+        }
+
+        System.out.println('\n');
 
 
 //        7.
