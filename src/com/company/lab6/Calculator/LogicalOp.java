@@ -1,5 +1,6 @@
 package com.company.lab6.Calculator;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -830,6 +831,7 @@ public class LogicalOp {
 
 
     //    1. Scrieti o metoda Java care sa schimbe pozitia a doua elemente intr-o Lista.
+
     public List<Integer> changePositionInList(List<Integer> myList, int a, int b) {
         int indexA = myList.indexOf(a);
         int indexB = myList.indexOf(b);
@@ -842,10 +844,36 @@ public class LogicalOp {
 
 //    2. Scrieti o metoda Java care sa primeasca o Lista si sa returneze o alta lista, care sa contina doar numerele pare din lista primita.
 
+    public List<Integer> returnEvenList(List<Integer> myList) {
+        List<Integer> evenList = new ArrayList<>();
+
+        for (int i : myList) {
+            if (i % 2 == 0) {
+                evenList.add(i);
+            }
+        }
+        return evenList;
+    }
+
 //    3. Scrieti o metoda Java care sa primeasca parametru o Lista nesortata, si sa returneze Lista sortata crescator.
-//    Atentie, sortarea sa se faca programatic(adica logica sa fie scrisa de voi), si nu folosit librarie externa, precum Collection.sort().
+//    Atentie, sortarea sa se faca programatic (adica logica sa fie scrisa de voi), si nu folosit librarie externa, precum Collection.sort().
 
+    public List<Integer> sortedList(List<Integer> myList) {
 
+        for (int i = 0; i < myList.size() - 1; i++) {
+            for (int j = i + 1; j < myList.size(); j++) {
+                if (myList.get(i) > myList.get(j)) {
+                    int valI = myList.get(i);
+                    int valJ = myList.get(j);
+                    int indI = myList.indexOf(valI);
+                    int indJ = myList.indexOf(valJ);
+                    myList.set(indI, valJ);
+                    myList.set(indJ, valI);
+                }
+            }
+        }
+        return myList;
+    }
 }
 
 

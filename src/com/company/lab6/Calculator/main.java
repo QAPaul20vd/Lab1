@@ -30,13 +30,16 @@ public class main {
         System.out.println('\r');
 
 //        3.
-        int Nr = 4;
-        System.out.println("Numerele din lista, incepand cu numarul " + Nr + " sunt:");
-        op.printListFromNr(randomList, Nr);
-        System.out.println('\r');
+        int Nr = 6;
+        if (randomList.contains(Nr)) {
+            System.out.println("Numerele din lista, incepand cu numarul " + Nr + " sunt:");
+            op.printListFromNr(randomList, Nr);
+            System.out.println('\r');
+        } else
+            System.out.println("Numarul introdus nu face parte din lista data.");
 
 //        4.
-        System.out.println();
+        System.out.println('\r');
         System.out.println("Lista in ordine inversa este: ");
         op.printListBackward(randomList);
         System.out.println('\r');
@@ -53,8 +56,11 @@ public class main {
         String day = "Vineri";
         int nr = 4;
 
-        System.out.println("Zilele saptamanii sunt: " + op.addStringToList(weekDays, nr, day) + ".");
-        System.out.println('\r');
+        if (nr <= weekDays.size()) {
+            System.out.println("Zilele saptamanii sunt: " + op.addStringToList(weekDays, nr, day) + ".");
+            System.out.println('\r');
+        } else
+            System.out.println("Numarul introdus este in afara lungimii listei. Introdu un numar valid intre 0 si " + weekDays.size()+"!");
 
 //        6.
         List<String> fourSeason = new ArrayList<>();
@@ -86,12 +92,33 @@ public class main {
         //*********************************<<_____O P T I O N A L E____>>***********************************************
 
 //        1.
-        int a = 2;
-        int b = 4;
-        List<Integer> changedList = op.changePositionInList(randomList, a, b);
-        System.out.print("Lista cu ordinea schimbata este: ");
-        for (int x : changedList) {
-            System.out.print(x + " ");
+        int a = 3;
+        int b = 7;
+        if (randomList.contains(a) && randomList.contains(b)) {
+            List<Integer> changedList = op.changePositionInList(randomList, a, b);
+            System.out.print("Lista cu ordinea schimbata este: ");
+            for (int x : changedList) {
+                System.out.print(x + " ");
+            }
+            System.out.println('\r');
+        } else
+            System.out.println("Numerele introduse nu fac parte din lista data.");
+        System.out.println('\r');
+
+
+//        2.
+        List<Integer> evenList = op.returnEvenList(randomList);
+        System.out.print("Numerele pare din lista data sunt: ");
+        for (int z : evenList) {
+            System.out.print(z + " ");
+        }
+        System.out.println('\n');
+
+//        3.
+        List<Integer> sortedList = op.sortedList(randList);
+        System.out.print("Lista sortata crescator este: ");
+        for (int n : sortedList) {
+            System.out.print(n + " ");
         }
     }
 }
