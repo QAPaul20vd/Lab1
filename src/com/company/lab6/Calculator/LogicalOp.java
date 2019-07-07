@@ -809,7 +809,7 @@ public class LogicalOp {
 //    8 .Scrieti o metoda Java care sa primeasca o Lista si sa returneze cel mai mare numar din ea.
 
     public int printSmallestMemberInList(List<Integer> myList) {
-//        Varianta mai simpla in care se foloseste sortarea automata si printam ultimul numar din lista ordonata:
+//        Varianta mai simpla in care se foloseste sortarea automata si returnam ultimul numar din lista ordonata:
 
 //        Collections.sort(myList);
 //        int s = myList.get(myList.size() - 1);
