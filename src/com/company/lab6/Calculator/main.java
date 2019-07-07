@@ -31,7 +31,7 @@ public class main {
 
 //        3.
         int Nr = 4;
-        System.out.println("Numerele din lista, incepand de la pozitia " + Nr + " sunt: ");
+        System.out.println("Numerele din lista, incepand cu numarul " + Nr + " sunt:");
         op.printListFromNr(randomList, Nr);
         System.out.println('\r');
 
@@ -82,5 +82,16 @@ public class main {
 
         System.out.println("Cel mai mare numar din lista este: " + op.printSmallestMemberInList(randList) + ".");
         System.out.println('\r');
+
+        //*********************************<<_____O P T I O N A L E____>>***********************************************
+
+//        1.
+        int a = 2;
+        int b = 4;
+        List<Integer> changedList = op.changePositionInList(randomList, a, b);
+        System.out.print("Lista cu ordinea schimbata este: ");
+        for (int x : changedList) {
+            System.out.print(x + " ");
+        }
     }
 }

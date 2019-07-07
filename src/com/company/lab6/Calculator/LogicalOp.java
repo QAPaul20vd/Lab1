@@ -769,7 +769,8 @@ public class LogicalOp {
 //    pornind de la numarul intreg primit ca si parametru.
 
     public void printListFromNr(List<Integer> firstList, int Nr) {
-        for (int i = Nr; i < firstList.size(); i++) {
+        int index = firstList.indexOf(Nr);
+        for (int i = index; i < firstList.size(); i++) {
             System.out.println(firstList.get(i));
         }
     }
@@ -823,6 +824,28 @@ public class LogicalOp {
         }
         return max;
     }
+
+    //**************************************<<_____L A B 14____>>***************************************************
+    //*********************************<<_____O P T I O N A L E____>>***********************************************
+
+
+    //    1. Scrieti o metoda Java care sa schimbe pozitia a doua elemente intr-o Lista.
+    public List<Integer> changePositionInList(List<Integer> myList, int a, int b) {
+        int indexA = myList.indexOf(a);
+        int indexB = myList.indexOf(b);
+
+        myList.set(indexA, b);
+        myList.set(indexB, a);
+
+        return myList;
+    }
+
+//    2. Scrieti o metoda Java care sa primeasca o Lista si sa returneze o alta lista, care sa contina doar numerele pare din lista primita.
+
+//    3. Scrieti o metoda Java care sa primeasca parametru o Lista nesortata, si sa returneze Lista sortata crescator.
+//    Atentie, sortarea sa se faca programatic(adica logica sa fie scrisa de voi), si nu folosit librarie externa, precum Collection.sort().
+
+
 }
 
 
