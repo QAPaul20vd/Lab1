@@ -1,5 +1,7 @@
 package com.company.lab7.Calculator;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
@@ -126,6 +128,30 @@ public class Read {
     // Metoda nu va primi parametru lungimea. In rezolvarea ei trebuie folosit try-catch.
     // (Hint: a se citi de la tastatura atata timp cat valoarea primita e numar, cand nu mai e numar, sa se intrerupa citirea)
 
+    public List<Integer> getList() {
+
+        List<Integer> myList = new ArrayList<>();
+        boolean repeat;
+
+        System.out.println("Introduceti numerele care sa faca parte din lista: ");
+
+//        for (int i = 0; i < 5; i++) {
+            do {
+                try {
+                    Scanner scan = new Scanner(System.in);
+                    int j = scan.nextInt();
+                    myList.add(j);
+                    repeat = true;
+                } catch (InputMismatchException error) {
+                    repeat = false;
+                    System.out.println("Not a number! Your list is: ");
+                    return myList;
+                }
+            }
+            while (repeat);
+//        }
+        return myList;
+    }
 
 
 }

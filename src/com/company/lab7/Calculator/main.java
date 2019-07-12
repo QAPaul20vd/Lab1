@@ -12,21 +12,21 @@ public class main {
 
 
 //        1.
-//        System.out.print("Introdu un numar intreg: ");
-//        System.out.println("Numarul introdus este: " + read.getInt() + ".");
+        System.out.print("Introdu un numar intreg: ");
+        System.out.println("Numarul introdus este: " + read.getInt() + ".");
 
 //        2.
-//        System.out.print("Introdu un numar real: ");
-//        System.out.println("Numarul introdus este: " + read.getFloat() + ".");
+        System.out.print("Introdu un numar real: ");
+        System.out.println("Numarul introdus este: " + read.getFloat() + ".");
 //
-//        System.out.print("Introdu un numar Double: ");
-//        System.out.println("Numarul introdus este: " + read.getDouble() + ".");
+        System.out.print("Introdu un numar Double: ");
+        System.out.println("Numarul introdus este: " + read.getDouble() + ".");
 //
-//        System.out.print("Introdu un numar Long: ");
-//        System.out.println("Numarul introdus este: " + read.getLong() + ".");
+        System.out.print("Introdu un numar Long: ");
+        System.out.println("Numarul introdus este: " + read.getLong() + ".");
 //
-//        System.out.print("Introdu un String: ");
-//        System.out.println("String-ul introdus este: " + read.getString() + ".");
+        System.out.print("Introdu un String: ");
+        System.out.println("String-ul introdus este: " + read.getString() + ".");
 
 //        3.
 
@@ -50,7 +50,17 @@ public class main {
 
 
 //        4.
+        List<Integer> myList = read.getList();
+        System.out.println(myList.toString());
 
+//        5.
+        int[] arrNumbers = {15, 20, 25, 30, 35, 40, 45, 50};
+        int index = 9;
+        op.getValueInArray(arrNumbers,index);
+
+//        6.
+        int timp = 5;
+        op.wait(timp);
 
     }
 }

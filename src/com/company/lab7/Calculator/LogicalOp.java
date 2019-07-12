@@ -877,9 +877,36 @@ public class LogicalOp {
     //**************************************<<_____L A B 15____>>***************************************************
 
 
-//5. In clasa LogicalOp, creati o metoda care sa primeasca un array de numere ca si parametru, si un numar. Fara a folosi conditii, si folosind un try-catch, afisati valoarea de pe pozitia numarului primit, iar daca valoarea numarului este mai mare decat numarul de pozitii din array, afisati textul: "Inside catch, number too large".
+//5. In clasa LogicalOp, creati o metoda care sa primeasca un array de numere ca si parametru, si un numar.
+// Fara a folosi conditii, si folosind un try-catch, afisati valoarea de pe pozitia numarului primit,
+// iar daca valoarea numarului este mai mare decat numarul de pozitii din array,
+// afisati textul: "Inside catch, number too large".
 
-//6. In clasa LogicalOp, creati o metoda  'wait()'. Metoda sa nu returneze nimic, dar sa primeasca un parametru de tip int. In interiorul ei, tratati metoda Thread.sleep(), astfel incat metoda noastra sa primeasca valoarea in secunde, cat sa astepte. Ex: wait(5) -> asteapta 5 secunde.
+    public void getValueInArray(int[] myArray, int index) {
+
+        try {
+            System.out.println(myArray[index]);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Inside catch, number too large.");
+        }
+    }
+
+
+//6. In clasa LogicalOp, creati o metoda  'wait()'. Metoda sa nu returneze nimic, dar sa primeasca un parametru de tip int.
+// In interiorul ei, tratati metoda Thread.sleep(), astfel incat metoda noastra sa primeasca valoarea in secunde,
+// cat sa astepte. Ex: wait(5) -> asteapta 5 secunde.
+
+    public void wait(int time) {
+
+        try {
+            System.out.println("Asteapta " + time + " secunde!");
+            Thread.sleep(time * 1000);
+        } catch (InterruptedException e) {
+            System.out.println("Intrerupt!");
+        }
+
+    }
+
 
 }
 
