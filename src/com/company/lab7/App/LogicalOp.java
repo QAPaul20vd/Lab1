@@ -4,6 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LogicalOp {
+    //1. Scrieti o metoda java, care sa afiseze urmatorul model:
+
+    public  void drawFace() {
+        System.out.println(" +\"\"\"\"\"+ ");
+        System.out.println("[| o o |]");
+        System.out.println(" |  ^  | ");
+        System.out.println(" | \'-\' | ");
+        System.out.println(" +-----+ ");
+    }
+
+    //2. Scrieti o metoda java, care sa afiseze urmatorul model:
+
+    public  void drawJava() {
+        System.out.println("   J    a    v     v    a");
+        System.out.println("   J   a a    v   v    a a");
+        System.out.println("J  J  aaaaa    v v    aaaaa");
+        System.out.println(" JJ  a     a    v    a     a");
+    }
 
     /*3. In clasa LogicalOp, creati o metoda de tip int, care sa se numeasca checkBiggerNumber(),
     si sa primeasca doua int-uri ca si parametrii. Folosind if - else, verificati in interiorul metode
@@ -212,7 +230,7 @@ public class LogicalOp {
     //7. Creati o metoda in clasa LogicalOp care sa primeasca un parametru de tip numar.
     // Metoda sa adune toate numerele pana la 100, pornind de la numarul primit ca si parametru, iar la final sa returneze rezultatul.
 
-    public int SumTo100(int q) {
+    public int sumTo100(int q) {
         int sum = 0;
         for (int i = q; i <= 100; i++) {
             sum += i;
@@ -224,7 +242,7 @@ public class LogicalOp {
     // Metoda sa adune toate numerele pana la 100, pornind de la numarul primit ca si parametru,
     // si sa calculeze media numerelor. La final, metoda sa returneze media.
 
-    public float SumTo100AndAverage(int q) {
+    public float sumTo100AndAverage(int q) {
         int sum = 0;
         float c = 0;
 
@@ -412,9 +430,9 @@ public class LogicalOp {
         return sum / count;
     }
 
-    //9. Creati o metoda care sa afiseze primele 20 de numere din sirul lui Fibonacci.
+    //9. Creati o metoda care sa afiseze primele X numere din sirul lui Fibonacci.
 
-    public void first20NrOfFibonacci() {
+    public void first20NrOfFibonacci(int x) {
         int r = 0;
         int t = 1;
         int sum;
@@ -423,7 +441,7 @@ public class LogicalOp {
         System.out.print(r + "; ");
         System.out.print(t + "; ");
 
-        while (count < 20) {
+        while (count < x) {
             sum = r + t;
             System.out.print(sum + "; ");
             count++;
@@ -458,7 +476,7 @@ public class LogicalOp {
                 System.out.print(i);
 
             if (i % 11 == 0)
-                System.out.println('\n');
+                System.out.println('\r');
             else
                 System.out.print(" ");
 
