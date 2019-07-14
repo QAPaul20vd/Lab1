@@ -1,9 +1,8 @@
 package com.company.lab7.App;
 
 
-import com.company.lab5.Array;
-
 import java.util.Arrays;
+import java.util.List;
 
 public class Run {
 
@@ -95,18 +94,23 @@ public class Run {
         switch (numberFromUser) {
             case 1:
                 sum();
+                logic.wait(2);
                 return true;
             case 2:
                 dif();
+                logic.wait(2);
                 return true;
             case 3:
                 mult();
+                logic.wait(2);
                 return true;
             case 4:
                 div();
+                logic.wait(2);
                 return true;
             case 5:
                 modulo();
+                logic.wait(2);
                 return true;
 
 
@@ -154,9 +158,9 @@ public class Run {
             case 4:
                 runLogicalOpARRAYMenu();
                 return true;
-//            case 5:
-//                amountOfSnow();
-//                return true;
+            case 5:
+                runLogicalOpLISTMenu();
+                return true;
 
             case 0:
                 System.out.println("Return to main menu.");
@@ -202,27 +206,35 @@ public class Run {
         switch (numberFromUser) {
             case 1:
                 checkBiggerNr();
+                logic.wait(2);
                 return true;
             case 2:
                 checkBigger3Nr();
+                logic.wait(2);
                 return true;
             case 3:
                 compareString();
+                logic.wait(2);
                 return true;
             case 4:
                 compareTextAndString();
+                logic.wait(2);
                 return true;
             case 5:
                 amountOfSnow();
+                logic.wait(2);
                 return true;
             case 6:
                 compareNrTo3();
+                logic.wait(2);
                 return true;
             case 7:
                 checkIfNumberIsEven();
+                logic.wait(2);
                 return true;
             case 8:
                 checkIfSomeCanVote();
+                logic.wait(2);
                 return true;
 
             case 0:
@@ -239,8 +251,7 @@ public class Run {
      */
     private int getFirstNr() {
         System.out.print("Please enter one number: ");
-        int first = read.getInt();
-        return first;
+        return read.getInt();
     }
 
     /**
@@ -248,8 +259,7 @@ public class Run {
      */
     private int getSecondNr() {
         System.out.print("Please enter the second number: ");
-        int second = read.getInt();
-        return second;
+        return read.getInt();
     }
 
     /**
@@ -314,8 +324,7 @@ public class Run {
      */
     private String getStr() {
         System.out.print("Introdu textul: ");
-        String text = read.getString();
-        return text;
+        return read.getString();
     }
 
     private void compareString() {
@@ -386,28 +395,35 @@ public class Run {
         switch (numberFromUser) {
             case 1:
                 printTo100FromNr();
+                logic.wait(2);
                 return true;
             case 2:
                 printToMinus100FromNr();
+                logic.wait(2);
                 return true;
             case 3:
                 printCountBetweenNr();
+                logic.wait(2);
                 return true;
             case 4:
                 printCountToHighest();
+                logic.wait(2);
                 return true;
             case 5:
                 printEvenNrsTo100();
+                logic.wait(2);
                 return true;
             case 6:
                 printOddNrsTo100();
+                logic.wait(2);
                 return true;
             case 7:
                 sumTo100();
+                logic.wait(2);
                 return true;
             case 8:
                 meanTo100();
-
+                logic.wait(2);
                 return true;
 
             case 0:
@@ -492,36 +508,47 @@ public class Run {
         switch (numberFromUser) {
             case 1:
                 printWhileTo100FromNr();
+                logic.wait(2);
                 return true;
             case 2:
                 printWhileToMinus100FromNr();
+                logic.wait(2);
                 return true;
             case 3:
                 printWhileCountBetweenNr();
+                logic.wait(2);
                 return true;
             case 4:
                 printWhileCountToHighest();
+                logic.wait(2);
                 return true;
             case 5:
                 printWhileEvenNrsTo100();
+                logic.wait(2);
                 return true;
             case 6:
                 printWhileOddNrsTo100();
+                logic.wait(2);
                 return true;
             case 7:
                 meanBySeven();
+                logic.wait(2);
                 return true;
             case 8:
                 meanTo100();
+                logic.wait(2);
                 return true;
             case 9:
                 Fibonacci();
+                logic.wait(2);
                 return true;
             case 10:
                 CozaLozaWoza();
+                logic.wait(2);
                 return true;
             case 11:
                 multiplicationTable();
+                logic.wait(2);
                 return true;
 
             case 0:
@@ -608,7 +635,7 @@ public class Run {
     }
 
     /**
-     * Selecteaza o optiune din meniul Logical Operations IF
+     * Selecteaza o optiune din meniul Logical Operations ARRAY
      */
     private boolean selectItemArrayMenu() {
         System.out.print("\rSelect the logical operation: ");
@@ -616,39 +643,51 @@ public class Run {
         switch (numberFromUser) {
             case 1:
                 getArrayTo100();
+                logic.wait(2);
                 return true;
             case 2:
                 getEvenArray();
+                logic.wait(2);
                 return true;
             case 3:
                 getAverageInArray();
+                logic.wait(2);
                 return true;
             case 4:
                 checkStringInArray();
+                logic.wait(2);
                 return true;
             case 5:
                 getIndex();
+                logic.wait(2);
                 return true;
             case 6:
                 removeNrFromArray();
+                logic.wait(2);
                 return true;
             case 7:
                 getSecondSmallestInArray();
+                logic.wait(2);
                 return true;
             case 8:
                 insertNrInArray();
+                logic.wait(2);
                 return true;
             case 9:
                 getMinMaxInArray();
+                logic.wait(2);
                 return true;
             case 10:
                 invertArray();
+                logic.wait(2);
                 return true;
             case 11:
                 findDuplicateInArray();
+                logic.wait(2);
                 return true;
             case 12:
                 sortUpArray();
+                logic.wait(2);
                 return true;
 
             case 0:
@@ -801,6 +840,147 @@ public class Run {
 
 
     /**
+     * Afiseaza meniul pentru Logical Operations pentru ARRAY cat timp este selectata o optiune
+     */
+    private void runLogicalOpLISTMenu() {
+        do {
+            printLogicalListMenu();
+
+        } while (selectItemListMenu());
+    }
+
+    /**
+     * Meniul Logical Operations ARRAY
+     */
+    private void printLogicalListMenu() {
+        System.out.println("\n0. Return to Logical Operations menu.\n" +
+                "1. Print values inside a custom List\n" +
+                "2. Add one number to a List\n" +
+                "3. Print values inside a list starting from a value\n" +
+                "4. Print a list in reverse order\n" +
+                "5. Add a string to a List in a given position\n" +
+                "6. \n" +
+                "7. \n" +
+                "8. \n" +
+                "9. \n" +
+                "10. \n" +
+                "11. \n" +
+                "12. ");
+    }
+
+    /**
+     * Selecteaza o optiune din meniul Logical Operations ARRAY
+     */
+    private boolean selectItemListMenu() {
+        System.out.print("\rSelect the logical operation: ");
+        int numberFromUser = read.getInt();
+        switch (numberFromUser) {
+            case 1:
+                getValuesInList();
+                logic.wait(2);
+                return true;
+            case 2:
+                addNrToList();
+                logic.wait(2);
+                return true;
+            case 3:
+                getListFromNr();
+                logic.wait(2);
+                return true;
+            case 4:
+                reverseList();
+                logic.wait(2);
+                return true;
+            case 5:
+                addStringToIndexList();
+                logic.wait(2);
+                return true;
+            case 6:
+                removeNrFromArray();
+                logic.wait(2);
+                return true;
+            case 7:
+                getSecondSmallestInArray();
+                logic.wait(2);
+                return true;
+            case 8:
+                insertNrInArray();
+                logic.wait(2);
+                return true;
+            case 9:
+                getMinMaxInArray();
+                logic.wait(2);
+                return true;
+            case 10:
+                invertArray();
+                logic.wait(2);
+                return true;
+            case 11:
+                findDuplicateInArray();
+                logic.wait(2);
+                return true;
+            case 12:
+                sortUpArray();
+                logic.wait(2);
+                return true;
+
+            case 0:
+                System.out.println("Return to Logical Operations menu.");
+                return false;
+            default:
+                System.out.println("Try again!");
+                return true;
+        }
+    }
+
+    private void getValuesInList() {
+        List<Integer> myList = read.getList();
+        System.out.println(myList.toString());
+    }
+
+    private void addNrToList() {
+        List<Integer> myList = read.getList();
+        System.out.println(myList.toString());
+        System.out.print("Introduceti numarul care trebuie adaugat in lista: ");
+        int n = read.getInt();
+        logic.addNrToList(myList, n);
+        System.out.print("Numarul " + n + " a fost adaugat la sfarsitul listei: " + myList.toString() + '\n');
+    }
+
+    private void getListFromNr() {
+        List<Integer> myList = read.getList();
+        System.out.println(myList.toString());
+        boolean repeat;
+        do {
+            System.out.print("\nIntroduceti numarul de la care sa fie afisata lista: ");
+            int n = read.getInt();
+            if (myList.contains(n)) {
+                System.out.println("Numerele din lista, incepand cu numarul " + n + " sunt: ");
+                logic.printListFromNr(myList, n);
+                System.out.println('\r');
+                repeat = false;
+            } else {
+                System.out.println("Numarul introdus nu face parte din lista data.");
+                repeat = true;
+            }
+        } while (repeat);
+    }
+
+    private void reverseList(){
+        List<Integer> myList = read.getList();
+        System.out.println(myList.toString());
+        System.out.println("Lista in sens invers este:");
+        logic.printListBackward(myList);
+    }
+
+    private void addStringToIndexList(){
+
+    }
+
+
+
+
+    /**
      * Continua sa afiseze meniul DRAW cat timp este selectata o optiune
      */
     private void runDrawingsMenu() {
@@ -831,15 +1011,19 @@ public class Run {
         switch (numberFromUser) {
             case 1:
                 drawStars();
+                logic.wait(2);
                 return true;
             case 2:
                 drawLines();
+                logic.wait(2);
                 return true;
             case 3:
                 drawFace();
+                logic.wait(2);
                 return true;
             case 4:
                 drawJava();
+                logic.wait(2);
                 return true;
 
 

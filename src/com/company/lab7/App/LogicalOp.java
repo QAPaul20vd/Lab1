@@ -918,7 +918,7 @@ public class LogicalOp {
     public void wait(int time) {
 
         try {
-            System.out.println("Asteapta " + time + " secunde!");
+//            System.out.println("Asteapta " + time + " secunde!");
             Thread.sleep(time * 1000);
         } catch (InterruptedException e) {
             System.out.println("Intrerupt!");
