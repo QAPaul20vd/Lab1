@@ -90,7 +90,7 @@ public class Read {
                 repeat = false;
             } catch (InputMismatchException error) {
                 repeat = true;
-                System.out.println("Not a number, try again!");
+                System.out.println("Not a String, try again!");
             }
         } while (repeat);
         return x;

@@ -6,7 +6,7 @@ import java.util.List;
 public class LogicalOp {
     //1. Scrieti o metoda java, care sa afiseze urmatorul model:
 
-    public  void drawFace() {
+    public void drawFace() {
         System.out.println(" +\"\"\"\"\"+ ");
         System.out.println("[| o o |]");
         System.out.println(" |  ^  | ");
@@ -16,7 +16,7 @@ public class LogicalOp {
 
     //2. Scrieti o metoda java, care sa afiseze urmatorul model:
 
-    public  void drawJava() {
+    public void drawJava() {
         System.out.println("   J    a    v     v    a");
         System.out.println("   J   a a    v   v    a a");
         System.out.println("J  J  aaaaa    v v    aaaaa");
@@ -606,10 +606,11 @@ public class LogicalOp {
 //    9. Creati o metoda care sa primeasca un array, si sa returneze al doilea cel mai mic numar din array.
 
     public int getSecondSmallestNrInArray(int[] myArray) {
-//        int iMin = 2147483647; // myArray[0];
-//        int iMin2 = 2147483647; // myArray[0];
+
         int arrLen = myArray.length;
-//
+
+    /**Alternativa mai compacta a codului:*/
+
 //        for (int i = 0; i < arrLen; i++)
 //            if (myArray[i] < iMin2)
 //                if (myArray[i] < iMin) {

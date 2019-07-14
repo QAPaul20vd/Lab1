@@ -1,6 +1,10 @@
 package com.company.lab7.App;
 
 
+import com.company.lab5.Array;
+
+import java.util.Arrays;
+
 public class Run {
 
     private Read read = new Read();
@@ -147,9 +151,9 @@ public class Run {
             case 3:
                 runLogicalOpWHILEMenu();
                 return true;
-//            case 4:
-//                compareTextAndString();
-//                return true;
+            case 4:
+                runLogicalOpARRAYMenu();
+                return true;
 //            case 5:
 //                amountOfSnow();
 //                return true;
@@ -575,7 +579,229 @@ public class Run {
     }
 
     /**
-     * Continua sa afiseze meniul cat timp este selectata o optiune
+     * Afiseaza meniul pentru Logical Operations pentru ARRAY cat timp este selectata o optiune
+     */
+    private void runLogicalOpARRAYMenu() {
+        do {
+            printLogicalArrayMenu();
+
+        } while (selectItemArrayMenu());
+    }
+
+    /**
+     * Meniul Logical Operations ARRAY
+     */
+    private void printLogicalArrayMenu() {
+        System.out.println("\n0. Return to Logical Operations menu.\n" +
+                "1. Create one Array with numbers from 1 to 100\n" +
+                "2. Print even numbers from 1 to 100\n" +
+                "3. Find the average from an Array\n" +
+                "4. Find if a String belongs to a given String Array\n" +
+                "5. Get position of a number in an Array\n" +
+                "6. Return an array without a given number\n" +
+                "7. Find the second smallest number in an Array\n" +
+                "8. Insert a number to a given index\n" +
+                "9. Find Min and Max in a given Array\n" +
+                "10. Invert values in an Array\n" +
+                "11. Print duplicate values in an Array\n" +
+                "12. Sort ascending an unsorted Array");
+    }
+
+    /**
+     * Selecteaza o optiune din meniul Logical Operations IF
+     */
+    private boolean selectItemArrayMenu() {
+        System.out.print("\rSelect the logical operation: ");
+        int numberFromUser = read.getInt();
+        switch (numberFromUser) {
+            case 1:
+                getArrayTo100();
+                return true;
+            case 2:
+                getEvenArray();
+                return true;
+            case 3:
+                getAverageInArray();
+                return true;
+            case 4:
+                checkStringInArray();
+                return true;
+            case 5:
+                getIndex();
+                return true;
+            case 6:
+                removeNrFromArray();
+                return true;
+            case 7:
+                getSecondSmallestInArray();
+                return true;
+            case 8:
+                insertNrInArray();
+                return true;
+            case 9:
+                getMinMaxInArray();
+                return true;
+            case 10:
+                invertArray();
+                return true;
+            case 11:
+                findDuplicateInArray();
+                return true;
+            case 12:
+                sortUpArray();
+                return true;
+
+            case 0:
+                System.out.println("Return to Logical Operations menu.");
+                return false;
+            default:
+                System.out.println("Try again!");
+                return true;
+        }
+    }
+
+    private void getArrayTo100() {
+        System.out.println("Array-ul de 100 de numere este:");
+
+        int[] myArray = logic.getArrayToHundred();
+
+        for (int i = 0; i < myArray.length; i++) {
+            if (i % 25 == 0)
+                System.out.println('\r');
+            System.out.print(myArray[i] + " ");
+        }
+    }
+
+    private void getEvenArray() {
+        System.out.println("Numerele pare dintr-un array de 100 de numere sunt: ");
+
+        int[] smallArray = new int[50];
+        int[] evenArray = logic.getEvenArrayToHundred(smallArray);
+        for (int i = 0; i < smallArray.length; i++) {
+            if (i % 25 == 0)
+                System.out.println('\r');
+            System.out.print(evenArray[i] + " ");
+        }
+        System.out.println('\n');
+    }
+
+    private int[] readIntArray() {
+        System.out.print("Introduceti dimensiunea array-ului: ");
+        int arraySize = read.getInt();
+        int[] customArray = new int[arraySize];
+        for (int i = 0; i < arraySize; i++) {
+            System.out.print("Introduceti valoarea de pe pozitia " + i + ": ");
+            customArray[i] = read.getInt();
+        }
+        System.out.println("Array-ul dat este: " + Arrays.toString(customArray));
+        return customArray;
+    }
+
+    private String[] readStringArray() {
+        System.out.print("Introduceti dimensiunea array-ului: ");
+        int arraySize = read.getInt();
+        String[] customStringArray = new String[arraySize];
+        for (int i = 0; i < arraySize; i++) {
+            System.out.print("Introduceti textul de pe pozitia " + i + ": ");
+            customStringArray[i] = read.getString();
+        }
+        System.out.println("Array-ul introdus este: " + Arrays.toString(customStringArray));
+        return customStringArray;
+    }
+
+    private void getAverageInArray() {
+        int[] localArr = readIntArray();
+        System.out.println("Media numerelor din array-ul dat este: " + logic.getAverageArray(localArr));
+    }
+
+    private void checkStringInArray() {
+        String[] myArray = readStringArray();
+        System.out.print("Introduceti textul cautat: ");
+        String strFind = read.getString();
+
+        if (logic.checkInArray(readStringArray(), strFind))
+            System.out.println("Stringul cautat, " + strFind + ", " +
+                    "se afla in array-ul " + Arrays.toString(myArray) + ".");
+        else
+            System.out.println("Stringul cautat, " + strFind + ", " +
+                    "nu se afla in array-ul " + Arrays.toString(myArray) + ".");
+    }
+
+    private void getIndex() {
+        int[] myInt = readIntArray();
+        System.out.print("Introduceti numarul cautat: ");
+        int j = read.getInt();
+        int index = logic.getPositionInArray(myInt, j);
+        if (index >= 0)
+            System.out.println("Numarul " + j + " se afla in array pe pozitia " + index + ".");
+        else {
+            System.out.println("Numarul " + j + " nu se afla in array.");
+        }
+    }
+
+    private void removeNrFromArray() {
+        int[] myArr = readIntArray();
+        System.out.print("Introduceti numarul pe care il scoateti din array: ");
+        int j = read.getInt();
+        int[] newArray = logic.removeNrFromArray(myArr, j);
+        System.out.print("Array-ul fara numarul " + j + " este: " + Arrays.toString(newArray));
+        System.out.println('\n');
+    }
+
+    private void getSecondSmallestInArray() {
+        int[] myArr = readIntArray();
+        int smallestNr = logic.getSecondSmallestNrInArray(myArr);
+        System.out.println("Al doilea cel mai mic numar din array-ul dat este: " + smallestNr + "." + '\n');
+    }
+
+    private void insertNrInArray() {
+        int[] myArr = readIntArray();
+        System.out.print("Introduceti numarul care sa fie adaugat in array: ");
+        int nr = read.getInt();
+        boolean repeat;
+        do {
+            System.out.print("Introduceti pozitia pe care sa fie inserat numarul: ");
+            int ind = read.getInt();
+            try {
+                repeat = false;
+                int[] finalArray = logic.insertElement(myArr, ind, nr);
+                System.out.print("Array-ul final este: " + Arrays.toString(finalArray));
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("Numarul introdus depaseste marimea array-ului.");
+                repeat = true;
+            }
+
+        } while (repeat);
+        System.out.println('\n');
+    }
+
+    private void getMinMaxInArray() {
+        int[] myArr = readIntArray();
+        logic.getMinMaxFromArray(myArr);
+    }
+
+    private void invertArray() {
+        int[] firstArr = readIntArray();
+        int[] invertedArr = logic.invertArray(firstArr);
+        System.out.println("Array-ul inversat este: " + Arrays.toString(invertedArr) + '\n');
+
+    }
+
+    private void findDuplicateInArray() {
+        int[] myArr = readIntArray();
+        int[] duplicateVal = logic.findDuplicate(myArr);
+        System.out.print("Valorile duplicate din array-ul dat sunt: " + Arrays.toString(duplicateVal) + '\n');
+    }
+
+    private void sortUpArray() {
+        int[] myArr = readIntArray();
+        int[] sortedArr = logic.sortUpArray(myArr);
+        System.out.print("Array-ul ordonat crescator este: " + Arrays.toString(sortedArr) + '\n');
+    }
+
+
+    /**
+     * Continua sa afiseze meniul DRAW cat timp este selectata o optiune
      */
     private void runDrawingsMenu() {
         do {
@@ -585,7 +811,7 @@ public class Run {
     }
 
     /**
-     * Afiseaza meniul
+     * Afiseaza meniul DRAW
      **/
     private void printDrawingsMenu() {
         System.out.println("\n0. Return to main menu.\n" +
@@ -597,7 +823,7 @@ public class Run {
     }
 
     /**
-     * Selecteaza o optiune din meniu
+     * Selecteaza o optiune din meniu DRAW
      */
     private boolean selectItemFromDrawingsMenu() {
         System.out.print("\nPlease select one menu number: ");
