@@ -130,9 +130,8 @@ public class LogicalOp {
         Apelati metoda in Main() pentru a verifica daca functioneaza.*/
 
     public boolean isNumberEven(int z) {
-        if (z % 2 == 0) {
+        if (z % 2 == 0)
             return true;
-        }
         return false;
     }
 
@@ -142,9 +141,8 @@ public class LogicalOp {
          Apelati metoda in Main() pentru a verifica daca functioneaza.*/
 
     public boolean isEligibleToVote(int y) {
-        if (y >= 18) {
+        if (y >= 18)
             return true;
-        }
         return false;
     }
 
@@ -699,14 +697,25 @@ public class LogicalOp {
 //     5. Creati o metoda care sa gaseasca toate valorile duplicate dintr-un array.
 
     public int[] findDuplicate(int[] myArray) {
-        int i, j, k = 0;
+        int i, j, l, k = 0;
         int lenArr = myArray.length;
-        int[] tempArray = new int[lenArr / 2];
+        int[] tempArray = new int[lenArr];
+        boolean tryInsert;
 
         for (i = 0; i < lenArr - 1; i++) {
-            for (j = i + 1; j < lenArr; j++) {
-                if (myArray[i] == myArray[j])
-                    tempArray[k++] = myArray[i];
+            tryInsert = true;
+            for(l = 0; l < k; l++) {
+                if (myArray[i] == tempArray[l])
+                    tryInsert = false;
+            }
+
+            if (tryInsert) {
+                for (j = i + 1; j < lenArr; j++) {
+                    if (myArray[i] == myArray[j]) {
+                        tempArray[k++] = myArray[i];
+                        j = lenArr;
+                    }
+                }
             }
         }
         int[] duplicateValues = new int[k];

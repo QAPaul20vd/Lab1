@@ -13,6 +13,7 @@ public class Run {
     /**
      * Continua sa afiseze meniul cat timp este selectata o optiune
      */
+
     public void runTheProgram() {
         do {
             printMenu();
@@ -51,7 +52,6 @@ public class Run {
                 System.out.println("\nChoose what to draw:");
                 runDrawingsMenu();
                 return true;
-
             case 0:
                 System.out.println("Bye!");
                 return false;
@@ -60,7 +60,6 @@ public class Run {
                 return true;
         }
     }
-
 
     /**
      * Continua sa afiseze meniul cat timp este selectata o optiune
@@ -112,8 +111,6 @@ public class Run {
                 modulo();
                 logic.wait(2);
                 return true;
-
-
             case 0:
                 System.out.println("Return to main menu.");
                 return false;
@@ -124,8 +121,50 @@ public class Run {
     }
 
     /**
+     * Citeste primul numar
+     */
+    private int getFirstNr() {
+        System.out.print("Please enter one number: ");
+        return read.getInt();
+    }
+
+    /**
+     * Citeste al doilea numar
+     */
+    private int getSecondNr() {
+        System.out.print("Please enter the second number: ");
+        return read.getInt();
+    }
+
+    private void sum() {
+        System.out.println("The sum is: " +
+                calc.addNrs(getFirstNr(), getSecondNr()));
+    }
+
+    private void dif() {
+        System.out.println("The difference is: " +
+                calc.difNrs(getFirstNr(), getSecondNr()));
+    }
+
+    private void mult() {
+        System.out.println("The result of the multiplication is: " +
+                calc.multNrs(getFirstNr(), getSecondNr()));
+    }
+
+    private void div() {
+        System.out.println("The result of the division is: " +
+                calc.divNrs(getFirstNr(), getSecondNr()));
+    }
+
+    private void modulo() {
+        System.out.println("The rest of the division is: " +
+                calc.modulo(getFirstNr(), getSecondNr()));
+    }
+
+    /**
      * Afiseaza meniul pentru Logical Operations cat timp este selectata o optiune
      */
+
     private void runLogicalOpMenu() {
         do {
             printLogicalMenu();
@@ -161,7 +200,6 @@ public class Run {
             case 5:
                 runLogicalOpLISTMenu();
                 return true;
-
             case 0:
                 System.out.println("Return to main menu.");
                 return false;
@@ -236,7 +274,6 @@ public class Run {
                 checkIfSomeCanVote();
                 logic.wait(2);
                 return true;
-
             case 0:
                 System.out.println("Return to Logical Operations menu.");
                 return false;
@@ -246,65 +283,6 @@ public class Run {
         }
     }
 
-    /**
-     * Citeste primul numar
-     */
-    private int getFirstNr() {
-        System.out.print("Please enter one number: ");
-        return read.getInt();
-    }
-
-    /**
-     * Citeste al doilea numar
-     */
-    private int getSecondNr() {
-        System.out.print("Please enter the second number: ");
-        return read.getInt();
-    }
-
-    /**
-     * Apeleaza metoda de adunare
-     */
-    private void sum() {
-        System.out.println("The sum is: " +
-                calc.addNrs(getFirstNr(), getSecondNr()));
-    }
-
-    /**
-     * Apeleaza metoda de scadere
-     */
-    private void dif() {
-        System.out.println("The difference is: " +
-                calc.difNrs(getFirstNr(), getSecondNr()));
-    }
-
-    /**
-     * Apeleaza metoda de inmultire
-     */
-    private void mult() {
-        System.out.println("The result of the multiplication is: " +
-                calc.multNrs(getFirstNr(), getSecondNr()));
-    }
-
-    /**
-     * Apeleaza metoda de impartire
-     */
-    private void div() {
-        System.out.println("The result of the division is: " +
-                calc.divNrs(getFirstNr(), getSecondNr()));
-    }
-
-    /**
-     * Apeleaza metoda modulo
-     */
-    private void modulo() {
-        System.out.println("The rest of the division is: " +
-                calc.modulo(getFirstNr(), getSecondNr()));
-    }
-
-    /**
-     * Metoda pentru a afla numarul mai mare
-     */
     private void checkBiggerNr() {
         System.out.println("The bigger number is: " +
                 logic.checkBiggerNumber(getFirstNr(), getSecondNr()));
@@ -425,7 +403,6 @@ public class Run {
                 meanTo100();
                 logic.wait(2);
                 return true;
-
             case 0:
                 System.out.println("Return to Logical Operations menu.");
                 return false;
@@ -495,7 +472,7 @@ public class Run {
                 "7. Print the mean of numbers divisible with 7 in an interval\n" +
                 "8. Mean of numbers between a given numbers and 100\n" +
                 "9. Print first X numbers from Fibonacci Sequence\n" +
-                "10. Metod CozaLozaWoza\n" +
+                "10. Metoda CozaLozaWoza\n" +
                 "11. Multiplication Table");
     }
 
@@ -550,7 +527,6 @@ public class Run {
                 multiplicationTable();
                 logic.wait(2);
                 return true;
-
             case 0:
                 System.out.println("Return to Logical Operations menu.");
                 return false;
@@ -689,7 +665,6 @@ public class Run {
                 sortUpArray();
                 logic.wait(2);
                 return true;
-
             case 0:
                 System.out.println("Return to Logical Operations menu.");
                 return false;
@@ -701,9 +676,7 @@ public class Run {
 
     private void getArrayTo100() {
         System.out.println("Array-ul de 100 de numere este:");
-
         int[] myArray = logic.getArrayToHundred();
-
         for (int i = 0; i < myArray.length; i++) {
             if (i % 25 == 0)
                 System.out.println('\r');
@@ -713,7 +686,6 @@ public class Run {
 
     private void getEvenArray() {
         System.out.println("Numerele pare dintr-un array de 100 de numere sunt: ");
-
         int[] smallArray = new int[50];
         int[] evenArray = logic.getEvenArrayToHundred(smallArray);
         for (int i = 0; i < smallArray.length; i++) {
@@ -838,9 +810,8 @@ public class Run {
         System.out.print("Array-ul ordonat crescator este: " + Arrays.toString(sortedArr) + '\n');
     }
 
-
     /**
-     * Afiseaza meniul pentru Logical Operations pentru ARRAY cat timp este selectata o optiune
+     * Afiseaza meniul pentru Logical Operations pentru LIST cat timp este selectata o optiune
      */
     private void runLogicalOpLISTMenu() {
         do {
@@ -850,7 +821,7 @@ public class Run {
     }
 
     /**
-     * Meniul Logical Operations ARRAY
+     * Meniul Logical Operations LIST
      */
     private void printLogicalListMenu() {
         System.out.println("\n0. Return to Logical Operations menu.\n" +
@@ -858,7 +829,7 @@ public class Run {
                 "2. Add one number to a List\n" +
                 "3. Print values inside a list starting from a value\n" +
                 "4. Print a list in reverse order\n" +
-                "5. (NOT YET) Add a string to a List in a given position\n" +
+                "5. Add a string to a List in a given position\n" +
                 "6. Print values and their position inside a List\n" +
                 "7. Find the greatest value in a List\n" +
                 "8. Change the position of two elements in a List\n" +
@@ -867,7 +838,7 @@ public class Run {
     }
 
     /**
-     * Selecteaza o optiune din meniul Logical Operations ARRAY
+     * Selecteaza o optiune din meniul Logical Operations LIST
      */
     private boolean selectItemListMenu() {
         System.out.print("\rSelect the logical operation: ");
@@ -913,7 +884,6 @@ public class Run {
                 sortUpList();
                 logic.wait(2);
                 return true;
-
             case 0:
                 System.out.println("Return to Logical Operations menu.");
                 return false;
@@ -963,9 +933,25 @@ public class Run {
         logic.printListBackward(myList);
     }
 
-    private void addStringToIndexList(){
+    private void addStringToIndexList() {
         List<String> myList = read.getStringList();
         System.out.println(myList.toString());
+        System.out.print("Introduceti textul pe care il adaugati in lista: ");
+        String strNew = read.getString();
+        boolean repeat;
+        do {
+            System.out.print("\nIntroduceti pozitia pe care sa fie pus textul in lista: ");
+            int n = read.getInt();
+            if (n <= myList.size()) {
+                System.out.println("Lista finala este: " + logic.addStringToList(myList, n, strNew));
+                System.out.println('\r');
+                repeat = false;
+            } else {
+                System.out.println("Pozitia introdusa depaseste marimea listei.");
+                repeat = true;
+            }
+        } while (repeat);
+
     }
 
     private void printValuesAndIndexList() {
@@ -1058,8 +1044,6 @@ public class Run {
                 drawJava();
                 logic.wait(2);
                 return true;
-
-
             case 0:
                 System.out.println("Return to main menu.");
                 return false;
@@ -1084,7 +1068,4 @@ public class Run {
     private void drawJava() {
         logic.drawJava();
     }
-
-
 }
-
