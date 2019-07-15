@@ -609,7 +609,7 @@ public class LogicalOp {
 
         int arrLen = myArray.length;
 
-    /**Alternativa mai compacta a codului:*/
+        /**Alternativa mai compacta a codului:*/
 
 //        for (int i = 0; i < arrLen; i++)
 //            if (myArray[i] < iMin2)
@@ -823,12 +823,12 @@ public class LogicalOp {
 //    si pe ce pozitie. (Ex: “Pe pozitia 1 valoare este 4”).
     public void printEachValueInList(List<Integer> myList) {
         for (int i = 0; i < myList.size(); i++) {
-            System.out.println("Pe pozitia " + i + " se afla valoarea: " + myList.get(i) + ".");
+            System.out.println("Pe pozitia " + (i + 1) + " se afla valoarea: " + myList.get(i) + ".");
         }
     }
 //    8 .Scrieti o metoda Java care sa primeasca o Lista si sa returneze cel mai mare numar din ea.
 
-    public int printSmallestMemberInList(List<Integer> myList) {
+    public int printBiggestMemberInList(List<Integer> myList) {
 //        Varianta mai simpla in care se foloseste sortarea automata si returnam ultimul numar din lista ordonata:
 
 //        Collections.sort(myList);

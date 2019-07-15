@@ -729,7 +729,7 @@ public class Run {
         int arraySize = read.getInt();
         int[] customArray = new int[arraySize];
         for (int i = 0; i < arraySize; i++) {
-            System.out.print("Introduceti valoarea de pe pozitia " + i + ": ");
+            System.out.print("Introduceti valoarea de pe pozitia " + (i + 1) + ": ");
             customArray[i] = read.getInt();
         }
         System.out.println("Array-ul dat este: " + Arrays.toString(customArray));
@@ -741,7 +741,7 @@ public class Run {
         int arraySize = read.getInt();
         String[] customStringArray = new String[arraySize];
         for (int i = 0; i < arraySize; i++) {
-            System.out.print("Introduceti textul de pe pozitia " + i + ": ");
+            System.out.print("Introduceti textul de pe pozitia " + (i + 1) + ": ");
             customStringArray[i] = read.getString();
         }
         System.out.println("Array-ul introdus este: " + Arrays.toString(customStringArray));
@@ -772,7 +772,7 @@ public class Run {
         int j = read.getInt();
         int index = logic.getPositionInArray(myInt, j);
         if (index >= 0)
-            System.out.println("Numarul " + j + " se afla in array pe pozitia " + index + ".");
+            System.out.println("Numarul " + j + " se afla in array pe pozitia " + (index + 1) + ".");
         else {
             System.out.println("Numarul " + j + " nu se afla in array.");
         }
@@ -858,14 +858,12 @@ public class Run {
                 "2. Add one number to a List\n" +
                 "3. Print values inside a list starting from a value\n" +
                 "4. Print a list in reverse order\n" +
-                "5. Add a string to a List in a given position\n" +
-                "6. \n" +
-                "7. \n" +
-                "8. \n" +
-                "9. \n" +
-                "10. \n" +
-                "11. \n" +
-                "12. ");
+                "5. (NOT YET) Add a string to a List in a given position\n" +
+                "6. Print values and their position inside a List\n" +
+                "7. Find the greatest value in a List\n" +
+                "8. Change the position of two elements in a List\n" +
+                "9. Print even numbers from a given List\n" +
+                "10. Sort ascending a random List\n");
     }
 
     /**
@@ -896,31 +894,23 @@ public class Run {
                 logic.wait(2);
                 return true;
             case 6:
-                removeNrFromArray();
+                printValuesAndIndexList();
                 logic.wait(2);
                 return true;
             case 7:
-                getSecondSmallestInArray();
+                getLargestNrInList();
                 logic.wait(2);
                 return true;
             case 8:
-                insertNrInArray();
+                changeIndexList();
                 logic.wait(2);
                 return true;
             case 9:
-                getMinMaxInArray();
+                printEvenList();
                 logic.wait(2);
                 return true;
             case 10:
-                invertArray();
-                logic.wait(2);
-                return true;
-            case 11:
-                findDuplicateInArray();
-                logic.wait(2);
-                return true;
-            case 12:
-                sortUpArray();
+                sortUpList();
                 logic.wait(2);
                 return true;
 
@@ -966,7 +956,7 @@ public class Run {
         } while (repeat);
     }
 
-    private void reverseList(){
+    private void reverseList() {
         List<Integer> myList = read.getList();
         System.out.println(myList.toString());
         System.out.println("Lista in sens invers este:");
@@ -974,11 +964,54 @@ public class Run {
     }
 
     private void addStringToIndexList(){
-
+        List<String> myList = read.getStringList();
+        System.out.println(myList.toString());
     }
 
+    private void printValuesAndIndexList() {
+        List<Integer> myList = read.getList();
+        System.out.println(myList.toString());
+        logic.printEachValueInList(myList);
+    }
 
+    private void getLargestNrInList() {
+        List<Integer> myList = read.getList();
+        System.out.println(myList.toString());
+        System.out.println("Cel mai mare numar din lista introdusa este: " +
+                logic.printBiggestMemberInList(myList) + ".");
+    }
 
+    private void changeIndexList() {
+        List<Integer> myList = read.getList();
+        System.out.println(myList.toString());
+        boolean repeat;
+        do {
+            System.out.print("Introduceti primul numar a carui pozitie o schimbati: ");
+            int a = read.getInt();
+            System.out.print("Introduceti al doilea numar pe care il schimbati: ");
+            int b = read.getInt();
+            if (myList.contains(a) && myList.contains(b)) {
+                List<Integer> changedList = logic.changePositionInList(myList, a, b);
+                System.out.print("Lista cu ordinea schimbata este: " + changedList.toString() + ".\n");
+                repeat = false;
+            } else {
+                System.out.println("\nNumerele introduse nu fac parte din lista data!\n");
+                repeat = true;
+            }
+        } while (repeat);
+    }
+
+    private void printEvenList() {
+        List<Integer> myList = read.getList();
+        System.out.println(myList.toString());
+        System.out.print("Numerele pare din lista data sunt: " + logic.returnEvenList(myList).toString() + ".\n");
+    }
+
+    private void sortUpList() {
+        List<Integer> myList = read.getList();
+        System.out.println(myList.toString());
+        System.out.println("Lista sortata crescator este: " + logic.sortedList(myList).toString() + ".\n");
+    }
 
     /**
      * Continua sa afiseze meniul DRAW cat timp este selectata o optiune

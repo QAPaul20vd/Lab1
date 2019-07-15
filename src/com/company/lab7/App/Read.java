@@ -152,5 +152,29 @@ public class Read {
         return myList;
     }
 
+    public List<String> getStringList() {
+
+        List<String> myList = new ArrayList<>();
+
+
+        System.out.println("Introduceti textele care sa faca parte din lista: \n" +
+                "(Daca vreti sa va opriti, tastati alt caracter)");
+        boolean repeat;
+        do {
+            Scanner scan = new Scanner(System.in);
+            String j = scan.next();
+
+            if (scan.hasNextInt()) {
+                repeat = false;
+                System.out.print("Lista introdusa este: ");
+                return myList;
+            } else {
+                myList.add(j);
+                repeat = true;
+            }
+        } while (repeat);
+        return myList;
+    }
+
 
 }
