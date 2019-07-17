@@ -25,10 +25,10 @@ public class Run {
      * Afiseaza meniul
      **/
     private void printMenu() {
-        System.out.println("\n0. Quit program.\n" +
-                "1. Basic Operations\n" +
+        System.out.println("\n1. Basic Operations\n" +
                 "2. Logical operations\n" +
-                "3. Drawings\n");
+                "3. Drawings\n" +
+                "0. QUIT\n");
 
     }
 
