@@ -133,7 +133,8 @@ public class Read {
         List<Integer> myList = new ArrayList<>();
         boolean repeat;
 
-        System.out.println("Introduceti numerele care sa faca parte din lista: ");
+        System.out.println("Introduceti numerele care sa faca parte din lista: \n" +
+                "Daca vreti sa va opriti, tastati o litera!");
 
 //        for (int i = 0; i < 5; i++) {
             do {
@@ -144,7 +145,7 @@ public class Read {
                     repeat = true;
                 } catch (InputMismatchException error) {
                     repeat = false;
-                    System.out.println("Not a number! Your list is: ");
+                    System.out.print("Your list is: ");
                     return myList;
                 }
             }
